@@ -1,0 +1,15 @@
+Fish Image Classification Using CNN and Transfer Learning
+-A Machine Learning project that leverages Convolution neural networks and other pre trained model
+to classify the fish species into their classes.
+
+Approach:
+1.Data Loading: Dataset.zip file was provided, with the use of this dataset the models were trained.
+2.Data Preprocessing/Image Augmentation: Resizing all images to a common size: (224, 224, 3). Normalization: pixel values scaled to [0, 1] using img_array / 255.0. Data augmentation (rotation, zoom, flip) to increase robustness
+3.Models Training : A custom CNN was built that consisted of the pipeline Conv2D → MaxPooling → Dropout → Flatten → Dense → Softmax.
+4.Transfer Learning :Used the following pre-trained models with ImageNet weights:
+    ResNet50
+    MobileNetV2
+    InceptionV3
+    VGG16
+    EfficientNetB0
+5.Model Compilation and training: Trained each model with 5-10 epoch. Added EarlyStopping and ModelCheckPoint for evaluating the model performance at each point and to stop the training if the loss does'nt decreases.
